@@ -1,0 +1,309 @@
+/* ローディング画面 */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+
+  /* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+ 
+/* コンテンツ部分の装飾 */
+.gallery {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.index-top-container{
+  height: 100vh;
+  background-color:#222;
+  
+}
+.index-top{
+  background-image:url(../img/stickies-2852375_1920.jpg);
+  height: 100%;
+  
+}
+.index-top h1,p{
+  position:absolute; 
+  left:0;
+  background-color:rgba(0,0,0,0.9);
+  color:whitesmoke;
+  transition: all .5s;
+}
+.title-span{
+  font-size:18px;
+}
+.index-top h1{
+  top:100px;
+  width:60%;
+  padding:50px;
+  
+}
+.index-top p{
+  width:40%;
+  padding:20px;
+}
+
+
+
+/* メニューボタン */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 50px;
+  background-color:rgba(0,0,0,0.9);
+  line-height: 50px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn span {
+  color: #fff;
+}
+
+.menu-btn span:after {
+  content: attr(data-txt-menu);
+}
+
+/* 開閉用ボタンがクリックされた時のスタイル */
+.open .menu-btn span:after {
+  content: attr(data-txt-close);
+  color:black;
+}
+/* メニューボタンend */
+.menu {
+  position: fixed;
+  display: table;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index:1;
+}
+
+.menu ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.menu li {
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu li a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  z-index:1;
+}
+
+.menu li a:hover {
+  color: #999;
+}
+
+/* 開閉用ボタンがクリックされた時のスタイル */
+.open .menu {
+  cursor: url(../images/cross.svg),auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* main-contents_star */
+.main-contents{
+  /* background-color:rgba(10, 10, 10,0.8); */
+  background-color:#222;
+  /* background-image:url(../img/IMG_0710.JPG); */
+  background-size:cover;
+  padding-bottom:200px;
+  /* height:2000px; */
+}
+/* 動くタイトル */
+@import url(https://fonts.googleapis.com/css?family=Lato:600);
+.rotating-text {
+  /* padding:200px; */
+  height:100px;
+  /* margin-top:100px; */
+  padding-top:100px;
+  margin-bottom:400px;
+  /* width:100%; */
+  background-color:#222;
+  font-family: Lato, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
+  transform: translateX(-80px);
+}
+.rotating-text p {
+  /* display: inline-flex; 
+  vertical-align: top;  */
+  position: static;
+  background-color:#222;
+  /* left:300px; */
+}
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  left:150px;
+}
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.alizarin {
+  color: #e74c3c;
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.peter-river {
+  color: #3498db;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.sun-flower {
+  color: #f1c40f;
+}
+/* 動くタイトルend */
+.star{
+  float:right;
+  z-index:2;
+}
+/*weworks */
+.weworks-container{
+  /* background-color:whitesmoke; */
+  /* background-color:rgba(10, 10, 10,0.8); */
+}
+.weworks-container h2{
+  text-align:center;
+  padding-top:80px;
+  color:whitesmoke;
+}
+.weworks-row{
+  margin-top:100px;
+}
+.weworks-col{
+  height:250px;
+  text-align: center
+}
+.weworks-col img{
+  height:200px;
+  width:200px;
+  border-radius:100%;
+
+}
+.weworks-contants-discription{
+  position: static;
+  background-color:#222;
+  color:whitesmoke;
+}
+.weworks-contants-title{
+  
+  top:150px;
+  left:30px;
+  padding-left:10px;
+  padding-right:10px;
+  background-color:rgba(255,255,255,0.8);
+  color:rgb(10, 10, 10);
+  border-radius:100px;
+}
+
+.puroduct-content-container{
+  background-color:whitesmoke;
+  padding-bottom:400px;
+  position: relative;
+}
+.puroduct-content-container h2{
+  text-align:center;
+  padding-top:200px;
+  font-size:100px;
+  visibility: hidden;
+}
+.puroduct-content-container p{
+  position: static;
+  font-size:20px;
+  /* text-align:center; */
+  /* margin:auto; */
+  margin-top:450px;
+  /* width:70%; */
+  background-color:whitesmoke;
+  color:#555;
+  padding-right:100px;
+  padding-left:100px;
+  visibility: hidden;
+
+}
+.puroduct-content-img{
+  position: absolute;
+  width: initial;
+  height: initial;
+  width:30%;
+  /* float:right; */
+  left:60%;
+  top:850px;
+}
+
+
+/* main-contents_end */
