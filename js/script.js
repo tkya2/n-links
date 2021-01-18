@@ -56,6 +56,14 @@ $(function(){
     scale:4,
   });
 });
+$(function(){
+  ScrollReveal().reveal('.puroduct-content-img', 
+  { delay: 120, 
+    distance: '1px', 
+    duration:2000,
+    scale:4,
+  });
+});
 
 // スクロールアニメーション
 

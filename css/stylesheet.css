@@ -299,11 +299,15 @@ img {
   position: absolute;
   width: initial;
   height: initial;
-  width:30%;
+  width:20%;
   /* float:right; */
   left:60%;
   top:850px;
 }
+/* .isggif{
+  width:300px;
+  width:300px;
+} */
 
 
 /* main-contents_end */
