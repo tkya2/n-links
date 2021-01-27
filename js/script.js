@@ -32,7 +32,7 @@ $(function () {
 
 // スクロールアニメーション
 $(function(){
-  window.sr = ScrollReveal({ reset: true ,mobile: true});
+  window.sr = ScrollReveal({ mobile: true});
   ScrollReveal().reveal('.weworks-col', 
   { delay: 120, 
     distance: '430px', 
@@ -50,6 +50,14 @@ $(function(){
 
 $(function(){
   ScrollReveal().reveal('.puroduct-content-container p', 
+  { delay: 120, 
+    distance: '1px', 
+    duration:2000,
+    scale:4,
+  });
+});
+$(function(){
+  ScrollReveal().reveal('.puroduct-content-img', 
   { delay: 120, 
     distance: '1px', 
     duration:2000,
